@@ -1,0 +1,242 @@
+@import "../../src/assets/scss/mixin";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 16px;
+  // color: $--color-primary;
+  color: #333;
+  font-family: 'Avenir Next', 'Yantramanav', 'Noto Sans JP', 'Helvetica', Arial,
+  'Microsoft Yahei';
+}
+
+body {
+  overflow: hidden;
+}
+
+h2, h3, h4, pre {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3, p {
+  margin-bottom: 10px;
+}
+
+$sideWidth: 210px;
+$headerHeight: 40px;
+
+/**
+ * page wrapper
+ */
+.example-page-wrapper {
+  overflow-y: auto;
+  height: 100%;
+  header {
+    position: fixed;
+    z-index: 100;
+    background: $--color-primary-active;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $headerHeight;
+    display: flex;
+    align-items: center;
+    h1, h2 {
+      padding: 0;
+      margin: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: $headerHeight;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+      text-indent: 20px;
+    }
+    h1 {
+      //width: $sideWidth;
+      font-size: 20px;
+    }
+    a {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -12px;
+      font-size: 0;
+      svg {
+        color: $--color-white;
+        opacity: 0.6;
+      }
+      &:hover {
+        svg {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .aside-wrapper {
+    position: fixed;
+    top: $headerHeight;
+    left: 0;
+    bottom: 0;
+    width: 210px;
+    background: $--color-background;
+    overflow: hidden;
+    .menu-wrapper {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      right: 2px;
+      overflow-y: auto;
+      bottom: 2px;
+      @include scrollbar();
+      a {
+        display: block;
+        padding: 8px 20px;
+        margin-right: 2px;
+        color: $--color-primary-active;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &.__current {
+          font-weight: bold;
+          text-decoration: underline;
+          background: $--color-background-hover;
+        }
+      }
+    }
+  }
+
+  .main-page-wrapper {
+    margin: $headerHeight 20px 20px $sideWidth + 20;
+    max-width: 1000px;
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      color: $--color-primary;
+    }
+    h1 {
+      border-bottom: 1px solid $--color-border;
+      padding: 20px 0 10px;
+    }
+    ul {
+      margin: 20px 0 0 0;
+      li {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+/**
+ * table
+ */
+
+table:not([class^=fg-table]) {
+  width: 100%;
+  color: #555;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid $--color-border;
+  tr {
+    th,
+    td {
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid $--color-border;
+    }
+    th {
+      background: $--color-background;
+    }
+    &:nth-child(2n) {
+      td {
+        background: $--color-background;
+      }
+    }
+    &:last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+/**
+ * code
+ */
+code {
+  padding: 2px 5px;
+  //background: #2b2b2b;
+  background: #777;
+  border-radius: 4px;
+  color: #fff;
+}
+
+pre {
+  code {
+    padding: 20px !important;
+    border-radius: 4px;
+  }
+  code.hljs {
+    padding-top: 0 !important;
+  }
+}
+
+/**
+ * margin, padding
+ */
+@for $i from 1 through 10
+{
+  $temp: $i * 5;
+  $tempPx: $temp + px;
+  .p#{$temp} {
+    padding:($tempPx);
+  }
+  .pl#{$temp} {
+    padding-left:($tempPx);
+  }
+  .pr#{$temp} {
+    padding-right:($tempPx);
+  }
+  .pt#{$temp} {
+    padding-top:($tempPx);
+  }
+  .pb#{$temp} {
+    padding-bottom:($tempPx);
+  }
+  .m#{$temp} {
+    margin:($tempPx);
+  }
+  .ml#{$temp} {
+    margin-left:($tempPx);
+  }
+  .mr#{$temp} {
+    margin-right:($tempPx);
+  }
+  .mt#{$temp} {
+    margin-top:($tempPx);
+  }
+  .mb#{$temp} {
+    margin-bottom:($tempPx);
+  }
+}
+
+/**
+ * background
+ */
+.bg-primary {
+  background: $--color-primary;
+}
+
+.bg-primary-active {
+  background: $--color-primary-active;
+}

@@ -1,0 +1,19 @@
+### rows
+
+```html
+<div style="width:600px;">
+  <fg-text :rows="2">{{ content }}</fg-text>
+  <h3>font-size, line-height</h3>
+  <fg-text :rows="5" font-size="24px" :line-height="32">{{content}}</fg-text>
+</div>
+<script>
+export default {
+  data() {
+    return {
+      content:
+        'ギアアップの不具合を感じるとのことで入庫されたが、テスターを当てても、特に該当するような症状は見受けられず、何度か走行テストも実施した結果、万が一あり得るとしたら触媒の劣化であることが考察されたが、テストで取り替えるにはあまりに高いので、50万相当の工賃がかかる旨と若干の違和感を感じるかもしれないが、走行に問題が生じているわけではない旨を説明し車は戻していたが、再度やはりおかしいとの問い合わせ。',
+    }
+  },
+}
+</script>
+```

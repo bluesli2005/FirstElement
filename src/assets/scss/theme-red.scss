@@ -1,0 +1,67 @@
+/**
+ * Primary
+ */
+// メインのテキストカラー
+$--color-primary: #333;
+// link, button
+// ページ背景色、リンク色
+$--color-primary-active: #E50012;
+// mouse over, link hover
+// リンク ホバー
+$--color-primary-hover: #FF2B3D;
+// placeholder, disabled, readonly color for input, select
+// プレースホルダー
+$--color-primary-placeholder: #999;
+// linear-gradient
+$--color-primary-gradient: linear-gradient(135deg, $--color-primary-active, $--color-primary-hover);
+
+/**
+ * Success
+ */
+// グラフ、ステータス背景色
+$--color-success: #F70C3B;
+// グラフ、ステータス背景色
+$--color-success-active: #F70C3B;
+// グラフ、ステータス背景色
+$--color-success-hover: #F70C3B;
+$--color-success-graph: #F70C3B;
+/**
+ * Warning
+ */
+// エラー、ポイント
+$--color-warning: #DB3394;
+$--color-warning-active: #DB3394;
+$--color-warning-hover: #DB3394;
+/**
+ * border
+ */
+// 罫線、非選択ボタン色
+$--color-border: #ddd;
+/**
+ * background
+ */
+// ブロック背景色
+$--color-background: #FAF2F3;
+// switch bg, /customer/regist/car/confirm border
+$--color-background-hover: #FAF2F3;
+
+/** white */
+$--color-white: #FFF;
+/** block */
+$--color-black: #000;
+
+/**
+ * Other
+ */
+// table sort
+$--color-table-sort-default: #CCC;
+// popup
+$--color-shadow-primary: rgba(51, 51, 51, 0.31);
+// switch
+$--color-shadow-gray: rgba(44, 44, 44, 0.1);
+// disabled button opacity 0.42
+$--color-disabled-opacity: 0.5;
+// radio color
+$--color-radio-checked: $--color-primary-active;
+
+
